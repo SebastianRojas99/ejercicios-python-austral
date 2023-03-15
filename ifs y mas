@@ -1,0 +1,131 @@
+## 6) Ingresar 3 numeros distintos. determinar y mostrar si se ingresaron en forma creciente
+
+n1= int(input("ingrese un numero "))
+n2= int(input("ingrese un numero "))
+n3= int(input("ingrese un numero "))
+
+if n1<n2 and n2<n3:
+    print(n1,n2,n3)
+elif n2>n1 and n3>n1:
+    print(n1,n3,n2)
+elif n1>n2 and n3> n1:
+    print(n2,n1,n3)
+else:
+    print(n2,n3,n1)
+    
+## 7) Dado un numero del 1 al 7 mostrar que dia de la semana es
+
+num= int(input("ingrese un numero para saber su dia"))
+
+if num==1:
+    print("lunes")
+elif num==2:
+    print("martes")
+elif num==3:
+    print("miercoles")
+elif num==4:
+    print("jueves")
+elif num==5:
+    print("viernes")
+elif num==2:
+    print("sabado")
+elif num==7:
+    print("domingo")
+else:
+    print("numero no aceptado.")
+
+    ##Forma Facil
+
+dic_dias = { "1":"lunes", "2":"martes", "3":"miercoles", "4":"jueves", "5":"viernes", "6":"sabado", "7":"domingo" }
+num=input("ingrese un numero para su dia de la semana")
+print("el dia es ",dic_dias[num])
+
+## 8)Una fábrica desea controlar la calidad de dos piezas, A y B de las cuales se dan como
+##dato el tipo de pieza y su medida en milímetros. Se debe indicar si la pieza cumple con las especificaciones de calidad que son las siguientes:
+##Las piezas tipo A deben medir 165 mm y se admite un error de +/- 2 mm
+##Las piezas tipo B deben medir 180 mm y se admite un error de +/- 3 mm
+
+
+pieza_A = int(input("Ingrese el valor de la pieza A"))
+pieza_B = int(input("Ingrese el valor de la pieza B"))
+
+if pieza_A == 165 or pieza_A>162 and pieza_A<168:
+    print("la medida A es correcta")
+else:
+    print("la medida A no sirve")
+
+if pieza_B == 180 or pieza_A>176 and pieza_A<184:
+    print("la medida B es correcta")
+else:
+    print("la medida B no sirve")
+
+## 9)Determinar si el primero de un conjunto de tres números dados, es mayor que los otros dos.
+
+
+n1 = int(input("ingrese numero a evaluar"))
+n2 = int(input("ingrese segundo numero a evaluar"))
+n3 = int(input("ingrese tercer numero a evaluar"))
+
+if n1>n2 and n1>n3:
+    print(n1,"es mas grande que los otros dos numeros")
+else:
+    print("n1 es menor que n2 o n3 ")
+
+## 10)Se ingresan seis números positivos DIFERENTES. Al finalizar, mostrar un cartel que
+##diga “El mayor número ingresado fue el xxx”.
+
+
+list_numeros = []
+for i in range(6):
+    while True:
+        numero = int(input("Ingrese un número: "))
+        if numero > 0 and numero not in list_numeros:
+            list_numeros.append(numero)
+            break
+print("el numero mas grande es ",(max(list_numeros)))
+
+## 11) El mismo problema que en el punto anterior pero ahora le agregamos que diga en qué
+## posición entró el mayor. (Ej: “el mayor fue xxx y entró quinto”)
+
+list_numeros = []
+for i in range(6):
+    while True:
+        numero = int(input("Ingrese un número: "))
+        if numero > 0 and numero not in list_numeros:
+            list_numeros.append(numero)
+            break
+val=list_numeros.index((max(list_numeros)))
+print("el numero mas grande es ",(max(list_numeros)))
+print("el elemento esta en la posicion ",val+1,"(segundo)")
+
+## 12)Una distribuidora de libros vende a librerías y a particulares. Aplica bonificaciones por cantidad según el siguiente criterio:
+##i) A librerías: hasta 24 unidades, el 20%. Más de 24 unidades, el 25%.
+##ii) A particulares: menos de 6 unidades, nada; desde 6 y hasta 18 unidades, el 5%.
+##Más de 18 unidades, el 10%.
+##El tipo de cliente está codificado como “L” para librerías y “P” para particulares.
+##Dado el importe bruto de una compra de libros,
+##el tipo de cliente de que se trata y la cantidad total pedida por el mismo, determinar el importe bruto bonificado.
+
+tipo_cliente = str(input("ingrese su tipo de cliente, L para libreria o P para cliente: "))
+if tipo_cliente== "L":
+        cantidad_L = int(input("ingrese la cantidad de libros comprados"))
+        valor_L = int(input("ingrese su valor bruto: "))
+        if cantidad_L <=24:
+            bono_20 = valor_L-valor_L*0.2
+            print("usted tiene una bonificacion de 20%, y su monto es: ", bono_20)
+        else:
+            bono_25 = valor_L-valor_L*0.25
+            print("usted tiene una bonificacion de 25% y su total es: ", bono_25)
+elif tipo_cliente == "P":
+    cantidad_P = int(input("ingrese la cantidad de libros comprados"))
+    valor_P = int(input("ingrese su valor bruto: "))
+    if cantidad_P < 6:
+        print("usted no tiene ninguna bonificacion, y su monto es: ", valor_P)
+    elif cantidad_P>=6 and cantidad_P<=18:
+        bono_5 = valor_P-valor_P*0.05
+        print("usted tiene una bonificacion de 5% y su total es: ", bono_5)
+    else:
+        bono_10 = valor_P-valor_P*0.1
+        print("usted tiene una bonificacion del 10% y su total es: ", bono_10)
+else:
+    print("error, el valor ingresado no coincide con una libreria o cliente.")
