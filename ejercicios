@@ -1,0 +1,65 @@
+##1.- dados como datos dos numeros calcular la suma y el producto, mostrar los resultados
+
+n1 = int(input("ingrese un numero "))
+n2 = int(input("ingrese otro numero"))
+
+n3= n1+n2;
+n4 = n1*n2
+
+print("suma ",n3,"producto ",n4)
+
+##Dados 5 numeros encontrar el promedio y evaluar el resultado
+
+sum=0
+for i in range(5):
+    numeros = int(input("Ingrese los numeros : "))
+    sum+= numeros;
+
+print("el promedio es ",sum/5)
+
+## 3) dadas las medidas de dos angulos de un triangulo, determinar la medida del tercero e informar el resultado
+
+print(" calculadora de angulos ")
+angulo_1 = int(input("Ingrese el primer angulo "))
+angulo_2 = int(input("Ingrese el segundo angulo "))
+
+print("////// PROCESANDO, NO APRETE ESC //////")
+
+resul= 180-angulo_1-angulo_2;
+
+
+print("el tercer lado vale ",resul)
+
+## 4) Dado como dato el importe de una factura, calcular el valor correspondiente al IVA e informarlo
+
+
+
+print("Calculadora de IVA")
+
+iva=21
+importe_fact = float(input("ingrese el importe de su factura "))
+
+resultado= importe_fact+ importe_fact*iva/100
+resultado2= importe_fact*iva/100
+
+print("el valor del iva es ",resultado2)
+print("su importe con iva es ",resultado)
+
+## 5)Dado el importe bruto de una factura, calcular el resultado bonificado con 4%, al monto obtenido calcularle el iva, finalmente informar el importe bruto, el valor de la 
+## bonificacion, el importe bruto bonificado, el monto correspondiente al iva, y el importe neto resultante
+
+bono=4
+iva=21
+importe_bruto = float(input("ingrese el importe bruto "))
+
+bruto_iva= importe_bruto+ importe_bruto*iva/100
+valor_iva= importe_bruto*iva/100
+bruto_bono= importe_bruto+ importe_bruto*bono/100
+valor_bono= importe_bruto*bono/100
+neto=importe_bruto+ valor_bono-valor_iva
+
+print("su valor bruto es ",importe_bruto)
+print("su valor bonificado es ",valor_bono)
+print("su bruto bonificado es ",bruto_bono)
+print("su valor de iva es ",valor_iva)
+print("su importe neto es ",neto)
