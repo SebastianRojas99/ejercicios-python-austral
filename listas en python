@@ -1,0 +1,56 @@
+# Ejercicio 1: Escriba un programa para reemplazar el 20 por una 'a'
+# en la siguiente lista de Python
+# y que la lista resultante sea la siguiente
+# [10,
+# 300, 400, 5000, 6000, 7000, 500, 30, 40]
+
+list1 = [10, 20, 300, 400, 5000, 6000, 500, 30, 40]
+
+list1[1] = 'a'
+print(list1)
+
+# Ejercicio 2: Escriba un programa para reemplazar el 5000 y el 6000
+# por 50 y 60 (respectivamente), pero con una sóla línea de código,
+# en la siguiente lista de Python
+# y que la lista resultante sea la siguiente
+# [10, 'a', 300, 400, 50, 60, 7000, 500, 30, 40]
+
+list2 = [10, 20, 300, 400, 5000, 6000, 500, 30, 40]
+
+list2[4:6]=[50,60]
+list2[1]= 'a'
+list2.insert(6,7000)
+print(list2)
+
+# Ejercicio 3: Escriba un programa para añadir el elemento 7000 después del
+# 6000 en la siguiente lista de Python
+# y que la lista resultante sea la siguiente
+# [10, 20, 300, 400, 5000, 6000, 7000, 500, 30, 40]
+
+list3 = [10, 20, 300, 400, 5000, 6000, 500, 30, 40]
+list3.insert(6,7000)
+print(list3)
+
+# Ejercicio 4: Escriba un programa para eliminar el elemento 6000 en la
+# siguiente lista de Python
+# y que la lista resultante sea la siguiente
+# [10, 20, [300, 400, [5000], 500], 30, 40]
+
+list4 = [10, 20, [300, 400, [5000, 6000], 500], 30, 40]
+
+list4[2][2].pop()
+print(list4)
+
+# Ejercicio 5: Dada la siguiente lista con otras listas anidadas
+
+# Escriba un programa para agregar la siguiente lista
+
+# y que la lista resultante sea la siguiente
+#['a', 'b', ['c', ['d', 'e', ['f',
+#'g', 'h',
+#, g', 'k'1, '1'l, 'm', 'n']
+# AYUDA ver ayuda ejercicio 4
+list5 = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "l", "m", "n"]]
+sub_list = ["h", "¡", "j"]
+list5[2][1][2].append(sub_list)
+print(list5)
